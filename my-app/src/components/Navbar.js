@@ -150,6 +150,7 @@ export default function Nav(props) {
 				</AppBar>
 			</ElevationScroll>\
 			<Toolbar />
+			<Toolbar />
 		</React.Fragment>
 	);
 }
