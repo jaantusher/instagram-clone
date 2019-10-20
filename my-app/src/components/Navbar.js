@@ -149,8 +149,8 @@ export default function Nav(props) {
 					</Container>
 				</AppBar>
 			</ElevationScroll>\
-			<Toolbar />
-			<Toolbar />
+			<Toolbar style={{ background: '#FAFAFA' }} />
+			<Toolbar style={{ background: '#FAFAFA' }} />
 		</React.Fragment>
 	);
 }
