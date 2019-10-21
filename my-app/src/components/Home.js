@@ -22,7 +22,7 @@ function Home() {
 							paddingLeft: '20px',
 							boxSizing: 'border-box',
 							height: '85vh',
-							background: 'red',
+
 							position: 'sticky',
 							top: ' 8%',
 						}}

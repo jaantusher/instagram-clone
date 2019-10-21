@@ -6,7 +6,8 @@ import Love from '../image/love.svg';
 import Share from '../image/share.svg';
 import Comment from '../image/comment.svg';
 import Bookmark from '../image/bookmark.svg';
-import { Grid } from '@material-ui/core';
+import { Grid, Button } from '@material-ui/core';
+import Dialogg from './Dialog.js';
 const Box = styled.div`
 	font-family: 'Hind Siliguri', sans-serif;
 	border: 1px solid #ddd;
@@ -21,6 +22,16 @@ const Input = styled.input`
 `;
 
 function Post() {
+	const [ open, setOpen ] = React.useState(false);
+
+	const handleClickOpen = () => {
+		setOpen(true);
+	};
+
+	const handleClose = (value) => {
+		setOpen(false);
+	};
+
 	return (
 		<Box>
 			<div
@@ -73,7 +84,12 @@ function Post() {
 				</div>
 
 				<div />
-				<img height="24px" width="24px" src={Dot} alt="dot" />
+				<Button style={{ height: '30px', width: '30px', padding: '0' }} onClick={handleClickOpen}>
+					<img height="24px" width="24px" src={Dot} alt="dot" />
+				</Button>
+				<Dialogg open={open} onClose={handleClose}>
+					<div style={{ padding: '20px' }}>I am jane Alam Tusher</div>
+				</Dialogg>
 			</div>
 			<div style={{ width: '100%', verticalAlign: 'baseline' }}>
 				<img
